@@ -1,0 +1,3 @@
+run pset/all
+cmd "${base.dir}/front" "mvn test" "BUILD SUCCESS" "BUILD FAILURE"
+cmd "${base.dir}/back" "mvn verify -Ptest -De2e.port=${front.e2e.port}" "BUILD SUCCESS" "BUILD FAILURE"

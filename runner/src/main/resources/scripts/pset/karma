@@ -1,0 +1,1 @@
+pset "${base.dir}/front" "karma.conf.js"

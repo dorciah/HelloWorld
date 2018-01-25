@@ -1,0 +1,3 @@
+run build/front
+run build/back
+run build/serveb

@@ -1,0 +1,1 @@
+cmd "${base.dir}/back" "mvn clean verify -Ptest -De2e.port=${front.e2e.port}" "BUILD SUCCESS" "BUILD FAILURE"

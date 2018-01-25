@@ -1,0 +1,23 @@
+
+.body {
+  background-color: black;
+}
+
+.container {
+  text-align: center;
+  opacity: 0.75;
+  min-height: 100vh;
+}
+
+.page {
+  background-image: url(../assets/back-earth.jpg);
+  background-size: cover;
+}
+
+.fa-2x {
+  vertical-align: middle;
+}
+
+.footer {
+  color:white;
+}

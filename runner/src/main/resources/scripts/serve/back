@@ -1,0 +1,1 @@
+start "cd back & mvn spring-boot:run -DskipTests" "Started BackApplication"

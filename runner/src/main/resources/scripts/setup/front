@@ -1,0 +1,1 @@
+cmd "${base.dir}/front" "mvn generate-resources -Pinstall" "BUILD SUCCESS" "BUILD FAILURE"

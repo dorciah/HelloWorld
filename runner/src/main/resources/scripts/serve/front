@@ -1,0 +1,1 @@
+start "cd front & ng serve" "webpack: Compiled successfully"

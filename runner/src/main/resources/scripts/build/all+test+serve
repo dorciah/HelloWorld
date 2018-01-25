@@ -1,0 +1,2 @@
+run build/test
+run build/all+serve

@@ -1,0 +1,1 @@
+cmd "${base.dir}/front" "mvn clean install -DskipTests -Dout.dir=${spring.static.dir}" "BUILD SUCCESS" "BUILD FAILURE"

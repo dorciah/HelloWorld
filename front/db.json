@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "userName": "simon.hall",
+      "enabled": true,
+      "image": "user4",
+      "email": "simonhall37@hotmail.com",
+      "edit": false,
+      "id": 1
+    },
+    {
+      "userName": "dorota.hall",
+      "enabled": true,
+      "image": "user4",
+      "email": "drt.kubica@gmail.com",
+      "edit": false,
+      "id": 2
+    },
+    {
+      "userName": "danny.hall",
+      "enabled": true,
+      "image": "user4",
+      "email": "dannyboy@hotmail.com",
+      "edit": false,
+      "id": 3
+    }
+  ]
+}

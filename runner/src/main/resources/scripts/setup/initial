@@ -1,0 +1,2 @@
+run setup/front
+run build/all+test+serve

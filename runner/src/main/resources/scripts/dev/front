@@ -1,0 +1,2 @@
+cmd "${base.dir}" "run-front.cmd serve" "done" ""
+cmd "${base.dir}" "run-front.cmd test" "done" ""

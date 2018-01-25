@@ -1,0 +1,4 @@
+run pset/karma
+run pset/angular-cli
+run pset/back
+run pset/front-env

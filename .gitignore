@@ -1,0 +1,15 @@
+/.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+back/.mvn/
+back/src/main/resources/static/
+back/src/main/resources/application.properties
+front/.angular-cli.json
+front/target/
+front/karma.conf.js
+front/src/environments/environment.prod.ts
+front/src/environments/environment.ts
+runner/bin/
+runner/target/
+runner/.classpath
+runner/.project

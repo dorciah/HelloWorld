@@ -1,0 +1,2 @@
+pset "${base.dir}/front/src/environments" "environment.ts"
+pset "${base.dir}/front/src/environments" "environment.prod.ts"

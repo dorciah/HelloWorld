@@ -1,0 +1,5 @@
+# server properties
+server.port=${back.port}
+
+# database
+spring.jpa.hibernate.ddl-auto=create-drop
