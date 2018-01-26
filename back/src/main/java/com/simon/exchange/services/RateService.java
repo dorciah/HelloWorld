@@ -18,4 +18,8 @@ public class RateService {
 		return null;
 	}
 	
+	public String getUrl() {
+		return null;
+	}
+	
 }

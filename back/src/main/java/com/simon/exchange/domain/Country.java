@@ -11,4 +11,12 @@ public class Country {
 	
 	public Country() {}
 	
+	public Country(long id, String name, String currency, double rate, double deduction) {
+		
+	}
+	
+	public String getName() {
+		return null;
+	}
+	
 }

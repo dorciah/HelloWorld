@@ -12,4 +12,20 @@ public class ClientRequest {
 	
 	public ClientRequest() {}
 	
+	public String getCountry() {
+		return null;
+	}
+	
+	public void setCountry(String country) {
+		
+	}
+	
+	public double getAmount() {
+		return Double.NaN;
+	}
+	
+	public void setAmount(double amount) {
+		
+	}
+	
 }

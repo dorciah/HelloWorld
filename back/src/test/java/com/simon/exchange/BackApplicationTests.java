@@ -1,4 +1,4 @@
-package com.simon.TBA;
+package com.simon.exchange;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

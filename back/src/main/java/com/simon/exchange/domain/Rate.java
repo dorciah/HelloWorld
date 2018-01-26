@@ -11,5 +11,13 @@ package com.simon.exchange.domain;
 public class Rate {
 	
 	public Rate() {}
+
+	public void setAsk(double d) {
+		
+	}
+	
+	public void setEffectiveDate(String effectiveDate) {
+		
+	}
 	
 }
