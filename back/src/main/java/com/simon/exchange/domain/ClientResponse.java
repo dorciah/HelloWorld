@@ -12,22 +12,45 @@ import java.util.List;
 
 public class ClientResponse {
 
+	private ClientRequest request;
+	private double rate;
+	private String effectiveDate;
+	private List<Result> results;
+	
 	public ClientResponse() {}
-	
-	public double getRate() {
-		return Double.NaN;
-	}
-	
-	public String getEffectiveDate() {
-		return null;
-	}
-	
+
+	/* getters and setters */
 	public ClientRequest getRequest() {
-		return null;
+		return request;
+	}
+
+	public void setRequest(ClientRequest request) {
+		this.request = request;
+	}
+
+	public double getRate() {
+		return rate;
+	}
+
+	public void setRate(double rate) {
+		this.rate = rate;
+	}
+
+	public String getEffectiveDate() {
+		return effectiveDate;
+	}
+
+	public void setEffectiveDate(String effectiveDate) {
+		this.effectiveDate = effectiveDate;
+	}
+
+	public List<Result> getResults() {
+		return results;
+	}
+
+	public void setResults(List<Result> results) {
+		this.results = results;
 	}
 	
-	public List<Result> getResults(){
-		return null;
-	}
 	
 }
