@@ -19,13 +19,12 @@ import com.simon.exchange.domain.RateResponse;
 public class RateService_Test {
 
 	private RateService service;
-	private RestTemplate restTemplate;
 	private RateResponse mockedValue;
 	
 	@Before
 	public void setup() {
 		service = new RateService();
-		restTemplate = new RestTemplate();
+		service.setRestTemplate(mock(RestTemplate.class));
 		mockedValue = new RateResponse();
 	}
 	
@@ -34,13 +33,14 @@ public class RateService_Test {
 		
 		List<Rate> rates = new ArrayList<>();
 		rates.add(new Rate());
-		mockedValue.setCurrency("Euro");
+		mockedValue.setCurrency("EUR");
 		mockedValue.setRates(rates);
 		
-		given(restTemplate.getForObject(service.getUrl(),RateResponse.class)).willReturn(mockedValue);
+		when(service.getRestTemplate().getForObject(service.getUrl() + "EUR" + service.getParams(),RateResponse.class))
+			.thenReturn(mockedValue);
 		RateResponse response = service.getRateResponse("EUR");
 		
-		Assert.assertEquals(response.getCurrency(), "Euro");
+		Assert.assertEquals(response.getCurrency(), "EUR");
 		Assert.assertEquals(response.getRates().size(), 1);
 	}
 	
@@ -49,7 +49,8 @@ public class RateService_Test {
 	
 	public void testGetRateResponse_cantAccessServerShouldThrowNullPointer() {
 		
-		given(restTemplate.getForObject(service.getUrl(),RateResponse.class)).willThrow(new RestClientException("Exchange rate api did not return a response"));
+		given(service.getRestTemplate().getForObject(service.getUrl() + "EUR" + service.getParams(),RateResponse.class))
+			.willThrow(new RestClientException("Exchange rate api did not return a response"));
 		expectedEx.expect(NullPointerException.class);
 	    expectedEx.expectMessage("Exchange rate api did not return a response");
 		service.getRateResponse("EUR");
