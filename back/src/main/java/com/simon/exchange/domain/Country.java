@@ -1,5 +1,10 @@
 package com.simon.exchange.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Domain object for a country including currency, tax and deductions
  * 
@@ -7,12 +12,24 @@ package com.simon.exchange.domain;
  * 
  */
 
+@Entity
+@Table(name="country")
 public class Country {
 	
+	@Id
+	@Column(name="ID", nullable=false, unique=true, length=11)
 	private long id;
+	
+	@Column(name="NAME",nullable=false,length=100)
 	private String name;
+	
+	@Column(name="CURRENCY",nullable=false,length=10)
 	private String currency;
+	
+	@Column(name="TAX",nullable=false,precision=2)
 	private double tax;
+	
+	@Column(name="DEDUCTIONS",nullable=false,precision=2)
 	private double deductions;
 	
 	public Country() {}

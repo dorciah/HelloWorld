@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.simon.TBA.services.MessageRepository;
+import com.simon.exchange.services.CountryRepository;
 
 /**
  * 
@@ -23,7 +23,7 @@ public class BackApplication {
 	}
 	
 	@Bean
-	public CommandLineRunner demo(MessageRepository repository) {
+	public CommandLineRunner demo(CountryRepository repository) {
 		return (args) -> {
 			
 		};
