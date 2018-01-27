@@ -23,6 +23,10 @@ public class Result {
 		this.amount =  amount;
 		this.diff = diff;
 	}
+	
+	public String toString() {
+		return this.order + ": " + this.description + " --- " + this.amount + " (" + this.diff + ")";
+	}
 
 	/* getters and setters */
 	public int getOrder() {
