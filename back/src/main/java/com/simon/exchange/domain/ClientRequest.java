@@ -14,6 +14,11 @@ public class ClientRequest {
 	private double amount;
 	
 	public ClientRequest() {}
+	
+	public ClientRequest(String country, double amount) {
+		this.country = country;
+		this.amount = amount;
+	}
 
 	/* getters and setters */
 	public String getCountry() {
