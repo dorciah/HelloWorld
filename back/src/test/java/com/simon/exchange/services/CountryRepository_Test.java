@@ -24,7 +24,7 @@ public class CountryRepository_Test {
 	
 	@Test
 	public void getCountryByName_shouldReturnResult() {
-		Country toPersist = new Country(1L,"Corfu","",0d,0d);
+		Country toPersist = new Country(4L,"Corfu","",0d,0d);
 		entityManager.persist(toPersist);
 		
 		Country toVerify = repository.getCountryByName("Corfu");
@@ -34,7 +34,7 @@ public class CountryRepository_Test {
 	
 	@Test
 	public void getCountryByName_shouldReturnNull() {
-		Country toPersist = new Country(1L,"Corfu","",0d,0d);
+		Country toPersist = new Country(4L,"Corfu","",0d,0d);
 		entityManager.persist(toPersist);
 		
 		Country toVerify = repository.getCountryByName("USA");
