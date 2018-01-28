@@ -29,6 +29,7 @@ public class NetSalaryCalculator {
 
 	private final Logger logger = Logger.getLogger(NetSalaryCalculator.class);
 	private final String HOME_COUNTRY = "Poland";
+	private String HOME_CURRENCY = "PLN";
 	private final int DAYS = 22;
 	
 	@Autowired
@@ -69,6 +70,8 @@ public class NetSalaryCalculator {
 			// calculate the results
 			List<Result> results = generateResults(request, RR, country);
 			
+			response.setCurrency(country.getCurrency());
+			response.setHomeCurrency(HOME_CURRENCY);
 			response.setRequest(request);
 			response.setResults(results);
 			

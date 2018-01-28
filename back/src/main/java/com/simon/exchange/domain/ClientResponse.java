@@ -15,7 +15,9 @@ public class ClientResponse {
 	private ClientRequest request;
 	private double rate;
 	private String effectiveDate;
+	private String currency;
 	private List<Result> results;
+	private String homeCurrency;
 	
 	public ClientResponse() {}
 
@@ -50,6 +52,22 @@ public class ClientResponse {
 
 	public void setResults(List<Result> results) {
 		this.results = results;
+	}
+
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
+	public String getHomeCurrency() {
+		return homeCurrency;
+	}
+
+	public void setHomeCurrency(String homeCurrency) {
+		this.homeCurrency = homeCurrency;
 	}
 	
 	
