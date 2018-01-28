@@ -13,4 +13,8 @@ export class AppPage {
     return element(by.css('app-root p')).getText();
   }
 
+  pauseBrowser(){
+    browser.pause();
+  }
+
 }
