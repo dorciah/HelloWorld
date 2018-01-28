@@ -7,12 +7,12 @@
 	<packaging>jar</packaging>
 
 	<name>back</name>
-	<description>The Base Application (TBA)</description>
+	<description>The Net Salary App</description>
 
 	<parent>
 		<groupId>com.simon</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.1.0</version>
+		<version>1.0</version>
 	</parent>
 
 	<dependencies>
