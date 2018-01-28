@@ -3,7 +3,8 @@ import { environment } from '../../environments/environment';
 import { HttpClient,HttpHeaders } from "@angular/common/http";
 import { Observable} from 'rxjs/Observable';
 
-import {Message} from './Message';
+import {Country} from './Country';
+import {ClientResponse} from './clientResponse';
 
 const API = environment.apiUrl;
 
@@ -14,12 +15,12 @@ export class ApiService {
 
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-  public getAllMessages():Observable<Message[]>{
-    return this.httpClient.get<Message[]>(API+'messages',{headers:this.headers});
+  public getAllCountries():Observable<Country[]>{
+    return this.httpClient.get<Country[]>(API+'exchange/countries',{headers:this.headers});
   }
 
-  public getMessage(id: number):Observable<Message>{
-    return this.httpClient.get<Message>(API+'messages/'+id,{headers:this.headers});
+  public sendRequest(request: any):Observable<ClientResponse>{
+    return this.httpClient.post<ClientResponse>(API+'exchange/request',request,{headers:this.headers});
   }
 
 }
