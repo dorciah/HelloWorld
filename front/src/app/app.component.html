@@ -1,15 +1,71 @@
 <div class="page">
-  <div class="container">
+  <div class="container form-container">
   <div class="jumbotron">
        <div class="container">
          <h1 class="display-3">Welcome to {{title}}!</h1>
-         <p>More text here</p>
-         <p><a class="btn btn-primary btn-lg" href="#" role="button">
-          <i class="fa fa-2x fa-rocket pull-left"></i>
-           Button
+         <p>{{tagLine}}</p>
+       </div>
+
+       <div *ngIf="warning" class="warning" id="warning">
+           <p id="warningText"><a class="btn btn-danger btn-lg" href="#" role="button" (click)="clearResults()">
+           <i class="fa fa-2x fa-warning pull-left"></i>
+           {{warningMessage}}
          </a></p>
        </div>
+
+       <form class="form-content" id="form">
+
+         <div class="form-group row">
+           <label for="country" class="col-sm-2 col-form-label" >Country</label>
+            <div class="col-sm-10">
+             <select class="form-control" id="country" required [(ngModel)]="model.country" name="something">
+               <option *ngFor="let c of countries" [value]="c.name">{{c.name}}</option>
+             </select>
+           </div>
+         </div>
+
+         <div class="form-group row">
+           <label for="amount" class="col-sm-2 col-form-label">Day Rate</label>
+           <div class="col-sm-10">
+             <input type="number" class="form-control" id="amount" value="0.00" [(ngModel)]="model.amount" name="something">
+           </div>
+         </div>
+
+         <p><a class="btn btn-primary btn-lg" href="#" role="button" id="submit" (click) = "submitForm()">
+          <i class="fa fa-2x fa-rocket pull-left"></i>
+           Submit!
+         </a></p>
+       </form>
+
+       <div *ngIf="showResults" id="results">
+         <p id="result-request"><strong> Request Details: </strong>{{response.request.amount}} {{response.currency}} per day in {{response.request.country}}</p>
+         <p id="result-rate" *ngIf="checkLast(3)"><strong> Exchange Details: </strong>Using rate {{response.rate}} effective on {{response.effectiveDate}}</p>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Description</th>
+                <th>Subtotal</th>
+                <th>Difference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let result of response.results">
+                <td id="row-{{result.order}}">{{result.description}}</td>
+                <td id="amount-{{result.order}}" *ngIf="!checkLast(result.order)">{{result.amount}} {{response.currency}}</td>
+                <td id="amount-{{result.order}}" *ngIf="checkLast(result.order)"><strong>{{result.amount}} {{response.homeCurrency}} </strong></td>
+                <td id="diff-{{result.order}}" *ngIf="!checkLast(result.order) || checkLast(2)" class="negative">{{result.diff}} {{response.currency}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><a class="btn btn-primary btn-lg" href="#" role="button" id="clear" (click)="clearResults()">
+            <i class="fa fa-2x fa-bomb pull-left"></i>
+            Clear
+          </a></p>
+       </div>
+
     </div>
+
   </div>
   <p class="footer">&copy; Simon Hall 2018 All Rights Reserved</p>
 </div>

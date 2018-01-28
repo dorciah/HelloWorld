@@ -6,12 +6,24 @@
 .container {
   text-align: center;
   opacity: 0.75;
-  min-height: 100vh;
+}
+
+.form-content,.warning {
+  padding-top:  30px;
+}
+
+.negative {
+  color: red;
+}
+
+.btn-inverse {
+  color: white;
 }
 
 .page {
   background-image: url(../assets/back-earth.jpg);
   background-size: cover;
+  min-height: 100vh;
 }
 
 .fa-2x {

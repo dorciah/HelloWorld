@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 
-import {ApiService} from './TBA-service/api.service';
+import {ApiService} from './salary/api.service';
 import { AppComponent } from './app.component';
 
 
