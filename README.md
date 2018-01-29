@@ -8,8 +8,9 @@ Required to build the software:
 
  - Windows (tested on Windows 10 version 1709)
  - Java (tested on 1.8u144)
- - Node JS (tested on 6.11.3 installed in C:/Programs Files/) 
+ - Node JS (tested on 6.11.3 installed in C:/Programs Files/ - necessary for maven to find it) 
  - Angular cli (tested on version 1.6.6)
+ - Maven (tested with 3.3.9)
  
  ## Initial Build
  
